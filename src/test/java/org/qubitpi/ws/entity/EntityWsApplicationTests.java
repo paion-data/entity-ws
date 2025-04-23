@@ -1,4 +1,4 @@
-package org.qubitpi.entity_ws;
+package org.qubitpi.ws.entity;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
