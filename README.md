@@ -4,6 +4,18 @@ Entity Webservice
 __Entity Webservice__ is a Spring Boot application template that lets us set up model driven JSON API web service with
 minimal effort. Its goal is to swiftly productionize a persistence webservice with modern CI/CD support.
 
+Entity Webservice __is for__:
+
+- non-business persistence capabilities
+- performance-wise caching
+
+It __is not for__:
+
+- security aspect, such as Authentication or Authorization
+- any business layer logics
+
+For this reason, Entity Webservice is suitable for a microservice architecture.
+
 Documentation
 -------------
 
@@ -43,6 +55,7 @@ configuration above. In addition, `ENTITY_WS_ARANGO_HOSTS` must start with eithe
 The default port is 8080.
 
 - Healthcheck: http://localhost:8080/actuator/health
+- Swagger UI: http://localhost:8080/swagger-ui/index.html
 - Creating an entity:
 
   ```console
