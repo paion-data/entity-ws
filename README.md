@@ -4,7 +4,7 @@ Entity Webservice
 __Entity Webservice__ is a Spring Boot application template that lets us set up model driven JSON API web service with
 minimal effort. Its goal is to swiftly productionize a persistence webservice with modern CI/CD support.
 
-Entity Webservice __is for__:
+Entity Webservice is designed for:
 
 - non-business persistence capabilities
 - performance-wise caching

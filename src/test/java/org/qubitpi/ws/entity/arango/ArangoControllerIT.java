@@ -74,14 +74,10 @@ public class ArangoControllerIT {
     @Test
     public void testCreateDocument() throws Exception {
         final ObjectNode payload = JSON_MAPPER.createObjectNode();
-        payload.put("database", "mydatabase");
-        payload.put("collection", "mycollection");
-        final ObjectNode document = JSON_MAPPER.createObjectNode();
-        document.put("myfield", "myvalue");
-        payload.set("document", document);
+        payload.put("myfield", "myvalue");
 
         mockMvc.perform(
-                post("/arango/createDocument")
+                post("/arango/createDocument/mydatabase/mycollection")
                         .content(JSON_MAPPER.writeValueAsBytes(payload))
                         .contentType(MediaType.APPLICATION_JSON)
         )
