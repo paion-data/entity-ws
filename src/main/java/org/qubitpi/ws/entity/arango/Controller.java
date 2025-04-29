@@ -18,6 +18,7 @@ package org.qubitpi.ws.entity.arango;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -93,7 +94,11 @@ class Controller {
                     "If the query parameter `returnNew` is `true`, then, for each generated document, the complete " +
                     "new document is returned under the `new` attribute in the result.\n"
     )
-    @PostMapping(value = "/createDocument/{database}/{collection}", produces = "application/json")
+    @PostMapping(
+            value = "/createDocument/{database}/{collection}",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
     JsonNode createDocument(
             @Parameter(
                     description = "ArangoDB database name. \n\n" +
