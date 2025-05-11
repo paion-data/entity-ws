@@ -1,6 +1,7 @@
 Entity Webservice
 =================
 
+![Java Version Badge][Java Version Badge]
 [![API Doc Badge]][API Doc URL]
 [![Apache License Badge]][Apache License, Version 2.0]
 
@@ -89,6 +90,7 @@ The use and distribution terms for [entity-ws]() are covered by the [Apache Lice
 
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
-
 [API Doc Badge]: https://img.shields.io/badge/Open%20API-Swagger-85EA2D.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white&labelColor=6BA539
 [API Doc URL]: https://springdoc.org/
+
+[Java Version Badge]: https://img.shields.io/badge/Java-17-brightgreen?style=for-the-badge&logo=OpenJDK&logoColor=white
