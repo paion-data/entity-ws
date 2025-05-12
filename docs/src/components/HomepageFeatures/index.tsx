@@ -43,8 +43,8 @@ const FeatureList: FeatureItem[] = [
     id: 'graph-icon',
     description: (
         <>
-          Designed for Knowledge Graph and connection inference, Entity WS has first-class support for
-          <a href="https://arango.qubitpi.org/stable/">ArangoDB</a> as a back-end and flexible pipeline-style
+          Designed for Knowledge Graph and connection inference, Entity WS has first-class support
+          for <a href="https://arango.qubitpi.org/stable/">ArangoDB</a> as a back-end and flexible pipeline-style
           architecture which handles nearly any graph database for data storage
         </>
     ),
