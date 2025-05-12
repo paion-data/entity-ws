@@ -1,4 +1,4 @@
-# Copyright 2025 Jiaqi Liu. All rights reserved.
+# Copyright 2025 Paion Data. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -99,7 +99,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         uses: docker/login-action@v2
         with:
-          username: jack20191124
+          username: paiondatahub
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push image to DockerHub
         if: github.ref == 'refs/heads/master'
@@ -107,14 +107,14 @@ jobs:
         with:
           context: .
           push: true
-          tags: jack20191124/entity-ws:latest
+          tags: paiondatahub/entity-ws:latest
       - name: Push image Description
         if: github.ref == 'refs/heads/master'
         uses: peter-evans/dockerhub-description@v4
         with:
-          username: jack20191124
+          username: paiondatahub
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: jack20191124/entity-ws
+          repository: paiondatahub/entity-ws
           readme-filepath: README.md
 
   documentation:
@@ -156,4 +156,4 @@ jobs:
           enable_jekyll: false
           user_name: ${{ env.USER }}
           user_email: ${{ env.EMAIL }}
-          cname: entity-ws.qubitpi.org
+          cname: entity-ws.paion-data.dev
