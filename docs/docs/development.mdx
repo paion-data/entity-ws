@@ -1,0 +1,86 @@
+---
+sidebar_position: 2
+title: Development
+---
+
+[//]: # (Copyright 2025 Jiaqi Liu. All rights reserved.)
+
+[//]: # (Licensed under the Apache License, Version 2.0 &#40;the "License"&#41;;)
+[//]: # (you may not use this file except in compliance with the License.)
+[//]: # (You may obtain a copy of the License at)
+
+[//]: # (    http://www.apache.org/licenses/LICENSE-2.0)
+
+[//]: # (Unless required by applicable law or agreed to in writing, software)
+[//]: # (distributed under the License is distributed on an "AS IS" BASIS,)
+[//]: # (WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.)
+[//]: # (See the License for the specific language governing permissions and)
+[//]: # (limitations under the License.)
+
+The following guide is intended to help developers who maintain or want to make changes to the Entity Webservice.
+
+Prerequisite
+------------
+
+- JDK 17
+- Maven
+- Docker
+
+Building
+--------
+
+Entity WS is built using maven. To run all tests:
+
+```console
+mvn clean verify
+```
+
+ArangoDB
+--------
+
+Spin up an Arango database
+
+```console
+docker run -d -p 8529:8529 \
+       -e ARANGO_ROOT_PASSWORD=root \
+       -v arango-data:/var/lib/arangodb3 \
+       -v arango-app:/var/lib/arangodb3-apps \
+       --name arangodb --platform linux/arm64/v8 arangodb
+```
+
+The ArangoDB Web console should be accessible at http://localhost:8529 with the username and password being `root` and
+`root`, respectively.
+
+:::tip
+
+For more documentation on navigating the Arango Web UI, please refer to
+[ArangoDB documentation](https://arango.qubitpi.org/stable/components/web-interface/)
+
+:::
+
+```console
+git clone git@github.com:QubitPi/entity-ws.git
+cd entity-ws
+mvn clean package
+
+export ENTITY_WS_ARANGO_HOSTS=http://localhost:8529
+export ENTITY_WS_ARANGO_USERNAME=root
+export ENTITY_WS_ARANGO_PASSWORD=root
+
+java -jar target/entity-ws-0.0.1-SNAPSHOT.jar
+```
+
+Note that the `ENTITY_WS_ARANGO_USERNAME` and the `ENTITY_WS_ARANGO_PASSWORD` is in accordance with the ArandoDB Docker
+configuration above. In addition, `ENTITY_WS_ARANGO_HOSTS` must start with either "__http://__" or "__https://__"
+
+The default port is 8080.
+
+- Healthcheck: http://localhost:8080/actuator/health
+- Swagger UI: http://localhost:8080/swagger-ui/index.html
+- Creating an entity:
+
+  ```console
+  curl --location 'localhost:8080/arango/createDocument/mydatabase/mycollection' --header 'Content-Type: application/json' --data '{
+      "myfield": "myvalue"
+  }' -v
+  ```
