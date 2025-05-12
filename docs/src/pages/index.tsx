@@ -1,5 +1,5 @@
 /**
- * Copyright 2025 Jiaqi Liu. All rights reserved.
+ * Copyright 2025 Paion Data. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,10 +49,10 @@ function HomepageHeader() {
                 style={{marginLeft: '10px'}}
             >
               <a
-                  href="https://github.com/QubitPi/entity-ws"
+                  href="https://github.com/paion-data/entity-ws"
                   rel="noopener"
                   target="_blank"
-                  aria-label="Star QubitPi/entity-ws on GitHub"
+                  aria-label="Star paion-data/entity-ws on GitHub"
                   style={{
                     textDecoration: 'none',
                     color: 'inherit',
