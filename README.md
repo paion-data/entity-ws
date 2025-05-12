@@ -34,7 +34,7 @@ For this reason, Kugelblitz is suitable for a microservice architecture.
 🚀 Quick Start
 --------------
 
-Start a production quality service at [kugelblitz.qubitpi.org](https://kugelblitz.qubitpi.org/docs/intro).
+Start a production quality service at [kugelblitz.qubitpi.org](https://kugelblitz.paion-data.dev/docs/intro).
 
 License
 -------
@@ -46,7 +46,7 @@ The use and distribution terms for [Kugelblitz]() are covered by the [Apache Lic
 [API Doc Badge]: https://img.shields.io/badge/Open%20API-Swagger-85EA2D.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white&labelColor=6BA539
 [API Doc URL]: https://springdoc.org/
 
-[Docker Pulls Badge]: https://img.shields.io/docker/pulls/jack20191124/kugelblitz?style=for-the-badge&logo=docker&color=2596EC
-[Docker Hub URL]: https://hub.docker.com/r/jack20191124/kugelblitz
+[Docker Pulls Badge]: https://img.shields.io/docker/pulls/paiondatahub/kugelblitz?style=for-the-badge&logo=docker&color=2596EC
+[Docker Hub URL]: https://hub.docker.com/r/paiondatahub/kugelblitz
 
 [Java Version Badge]: https://img.shields.io/badge/Java-17-brightgreen?style=for-the-badge&logo=OpenJDK&logoColor=white

@@ -9,7 +9,7 @@ Quick Start
 ### Getting Source Code
 
 ```console
-git clone git@github.com:QubitPi/Kugelblitz.git
+git clone git@github.com:paion-data/Kugelblitz.git
 cd Kugelblitz
 ```
 
@@ -70,7 +70,7 @@ curl -X 'POST' \
 }'
 ```
 
-Next we will verify the data has been saved into database. The quick start uses [ArangoDB](https://arango.qubitpi.org/)
+Next we will verify the data has been saved into database. The quick start uses [ArangoDB](https://arango.paion-data.dev/)
 as the persistence database. We can first hit the Arando web console at __http://localhost:8529/__ which should take us to a
 page like the following:
 
@@ -78,9 +78,9 @@ page like the following:
 
 Use __root__ and __root__ as username and password, respectively. Then navigate to the data page by __Login__ ->
 selecting __library__ in database dropdown menu -> click __Select DB: library__ -> click __books__
-[collection](https://arango.qubitpi.org/stable/concepts/data-structure/collections/) -> click __Content__ in the top
+[collection](https://arango.paion-data.dev/stable/concepts/data-structure/collections/) -> click __Content__ in the top
 navigation bar. As we can see the data already exists as an
-[Arango document](https://arango.qubitpi.org/stable/concepts/data-structure/documents/) in the database:
+[Arango document](https://arango.paion-data.dev/stable/concepts/data-structure/documents/) in the database:
 
 ![Example Data in ArangoDB](img/example-data.png "Error loading img/example-data.png")
 

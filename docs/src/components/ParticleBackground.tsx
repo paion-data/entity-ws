@@ -1,5 +1,5 @@
 /**
- * Copyright 2025 Jiaqi Liu. All rights reserved.
+ * Copyright 2025 Paion Data. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ import {useEffect, useMemo, useState} from "react";
 import {loadSlim} from "@tsparticles/slim";
 
 /**
- * The background component of kugelblitz.qubitpi.org's hompage.
+ * The background component of kugelblitz.paion-data.dev's hompage.
  *
  * @param props  The regular React props object that contains only 1 attribute for now: "id", which is used for CSS
  * selector linking

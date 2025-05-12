@@ -10,12 +10,12 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>org.qubitpi</groupId>
+    <groupId>com.paiondata</groupId>
     <artifactId>kugelblitz</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Kugelblitz</name>
     <description>Spring Boot Starter based CRUD webservice</description>
-    <url>https://github.com/QubitPi/Kugelblitz</url>
+    <url>https://github.com/paion-data/Kugelblitz</url>
 
     <licenses>
         <license>
@@ -27,8 +27,8 @@
 
     <developers>
         <developer>
-            <name>Jiaqi Liu</name>
-            <url>https://github.com/QubitPi</url>
+            <name>Paion Data</name>
+            <url>https://github.com/paion-data</url>
         </developer>
     </developers>
 
