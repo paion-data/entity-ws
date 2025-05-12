@@ -1,5 +1,5 @@
 /**
- * Copyright 2025 Jiaqi Liu. All rights reserved.
+ * Copyright 2025 Paion Data. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ const FeatureList: FeatureItem[] = [
     description: (
         <>
           Designed for Knowledge Graph and connection inference, Entity WS has first-class support
-          for <a href="https://arango.qubitpi.org/stable/">ArangoDB</a> as a back-end and flexible pipeline-style
+          for <a href="https://arango.paion-data.dev/stable/">ArangoDB</a> as a back-end and flexible pipeline-style
           architecture which handles nearly any graph database for data storage
         </>
     ),
@@ -57,7 +57,7 @@ const FeatureList: FeatureItem[] = [
     id: 'not-used',
     description: (
         <>
-          Entity WS is 100% open source and available on <a href="https://github.com/QubitPi/entity-ws">Github</a>.
+          Entity WS is 100% open source and available on <a href="https://github.com/paion-data/entity-ws">Github</a>.
           Released
           under the commercial-friendly
           <a href="http://www.apache.org/licenses/LICENSE-2.0.html"> Apache License, Version 2.0.</a>
