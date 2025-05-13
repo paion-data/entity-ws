@@ -30,7 +30,7 @@ services:
         condition: service_healthy
 
   arango-db:
-    image: arangodb:3.11.13
+    image: arangodb:latest
     ports:
       - "8529:8529"
     environment:
