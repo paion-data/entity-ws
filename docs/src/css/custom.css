@@ -20,6 +20,21 @@
  * work well for content-centric websites.
  */
 
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../static/fonts/Poppins/Poppins-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../../static/fonts/Poppins/Poppins-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'UbuntuMono-Regular';
+    src: url('../../static/fonts/Ubuntu/UbuntuMono-Regular.ttf') format('ttf');
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #ff653a;
@@ -29,6 +44,9 @@
   --ifm-color-primary-light: #fd762d;
   --ifm-color-primary-lighter: #fd762d;
   --ifm-color-primary-lightest: #fc7b2a;
+  --ifm-font-family-base: 'Poppins-Regular';
+  --ifm-heading-font-family: 'Poppins-Bold';
+  --ifm-font-family-monospace: 'UbuntuMono-Regular';
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
