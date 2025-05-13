@@ -136,7 +136,6 @@ jobs:
       - name: Generate Javadoc
         run: mvn -B clean javadoc:javadoc
       - name: Move Javadoc into documentation directory
-        if: github.ref == 'refs/heads/master'
         run: mv target/reports/apidocs/ docs/build/apidocs/
       - name: Deploy Documentation (including Javadoc) to GitHub Pages
         if: github.ref == 'refs/heads/master'
