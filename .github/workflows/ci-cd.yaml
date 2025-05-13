@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ---
-name: CI/CD
+name: Entity WS
 
 "on":
   pull_request:
@@ -20,140 +20,13 @@ name: CI/CD
     branches:
       - master
 
-env:
-  JDK_VERSION: 17
-  JDK_DISTRIBUTION: 'adopt'
-  NODE_VERSION: 22
-
 jobs:
-  cancel-previous:
-    name: Cancel Previous Runs In Order to Allocate Action Resources Immediately for Current Run
-    if: github.ref != 'refs/heads/master'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Cancel previous
-        uses: styfle/cancel-workflow-action@0.12.1
-        with:
-          access_token: ${{ github.token }}
-
-  yaml-lint:
-    name: YAML Style Check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actionshub/yamllint@main
-
-  markdown-lint:
-    name: Markdown Style Check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actionshub/markdownlint@main
-
-  linkChecker:
-    name: Link Check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v1.9.0
-        with:
-          fail: true
-
-  tests:
-    name: Unit & Integration Tests
-    needs: [yaml-lint, markdown-lint, linkChecker]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Set up JDK ${{ env.JDK_VERSION }}
-        uses: actions/setup-java@v4
-        with:
-          java-version: ${{ env.JDK_VERSION }}
-          distribution: ${{ env.JDK_DISTRIBUTION }}
-      - name: Run unit & integration tests
-        run: mvn -B clean verify
-
-  docker-image:
-    name: Test Build & Release Docker Image
-    needs: tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Set up JDK ${{ env.JDK_VERSION }}
-        uses: actions/setup-java@v4
-        with:
-          java-version: ${{ env.JDK_VERSION }}
-          distribution: ${{ env.JDK_DISTRIBUTION }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-      - name: Test image build
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: false
-      - name: Login to DockerHub
-        if: github.ref == 'refs/heads/master'
-        uses: docker/login-action@v2
-        with:
-          username: paiondatahub
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Push image to DockerHub
-        if: github.ref == 'refs/heads/master'
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: paiondatahub/entity-ws:latest
-      - name: Push image Description
-        if: github.ref == 'refs/heads/master'
-        uses: peter-evans/dockerhub-description@v4
-        with:
-          username: paiondatahub
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: paiondatahub/entity-ws
-          readme-filepath: README.md
-
-  documentation:
-    name: Test & Release Documentation (including Javadoc)
-    needs: tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Set up JDK ${{ env.JDK_VERSION }}
-        uses: actions/setup-java@v4
-        with:
-          java-version: ${{ env.JDK_VERSION }}
-          distribution: ${{ env.JDK_DISTRIBUTION }}
-      - name: Setup Node ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - name: Setup yarn
-        run: |
-          corepack enable
-          yarn set version latest
-      - name: Install dependencies
-        working-directory: docs
-        run: yarn
-      - name: Build documentation
-        working-directory: docs
-        run: yarn build
-      - name: Generate Javadoc
-        run: mvn -B clean javadoc:javadoc
-      - name: Move Javadoc into documentation directory
-        run: mv target/reports/apidocs/ docs/build/apidocs/
-      - name: Deploy documentation (including Javadoc) to GitHub Pages
-        if: github.ref == 'refs/heads/master'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/build
-          enable_jekyll: false
-          user_name: ${{ env.USER }}
-          user_email: ${{ env.EMAIL }}
-          cname: entity-ws.paion-data.dev
+  ci-cd:
+    name: CI/CD
+    uses: paion-data/hashistack/.github/workflows/ws-ci-cd.yaml@master
+    secrets: inherit
+    with:
+      user-name: QubitPi
+      user-email: jack20220723@gmail.com
+      cname: entity-ws.paion-data.dev
+      docker-image-name: entity-ws
