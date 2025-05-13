@@ -4,15 +4,16 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "yarn load-fonts && docusaurus start",
+    "build": "yarn load-fonts && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "load-fonts": "mkdir -p static/fonts && cd static/fonts && curl -L -O https://github.com/paion-data/.github/raw/refs/heads/master/fonts/Regular.ttf && curl -L -O https://github.com/paion-data/.github/raw/refs/heads/master/fonts/Bold.ttf && curl -L -O https://github.com/paion-data/.github/raw/refs/heads/master/fonts/Mono.ttf && cd ../../../"
   },
   "dependencies": {
     "@docusaurus/core": "3.5.2",

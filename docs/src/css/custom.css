@@ -22,17 +22,17 @@
 
 @font-face {
     font-family: 'Regular';
-    src: url('https://github.com/paion-data/.github/raw/refs/heads/master/fonts/Regular.ttf') format('ttf');
+    src: url('../../static/fonts/Regular.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Bold';
-    src: url('https://github.com/paion-data/.github/raw/refs/heads/master/fonts/Bold.ttf') format('ttf');
+    src: url('../../static/fonts/Bold.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Mono';
-    src: url('https://github.com/paion-data/.github/raw/refs/heads/master/fonts/Mono.ttf') format('ttf');
+    src: url('../../static/fonts/Mono.ttf') format('ttf');
 }
 
 /* You can override the default Infima variables here. */
@@ -46,7 +46,7 @@
   --ifm-color-primary-lightest: #fc7b2a;
   --ifm-font-family-base: 'Regular';
   --ifm-heading-font-family: 'Bold';
-  --ifm-font-family-monospace: 'Regular';
+  --ifm-font-family-monospace: 'Mono';
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
