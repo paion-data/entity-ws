@@ -13,6 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * ⚠️ This file will NOT be used as part of documentation release at entity-ws.paion-data.dev and is used for local dev
+ * only. It will be overwritten by https://github.com/paion-data/hashistack/blob/master/.github/docusaurus/font.css
+ */
+
 @font-face {
     font-family: 'Poppins-Regular';
     src: url('../../static/fonts/Poppins/Poppins-Regular.ttf') format('ttf');
@@ -33,3 +39,8 @@
     --bold-font: 'Poppins-Bold';
     --mono-font: 'UbuntuMono-Regular';
 }
+
+/**
+ * ⚠️ This file will NOT be used as part of documentation release at entity-ws.paion-data.dev and is used for local dev
+ * only. It will be overwritten by https://github.com/paion-data/hashistack/blob/master/.github/docusaurus/font.css
+ */
