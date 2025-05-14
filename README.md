@@ -6,7 +6,7 @@ Entity Webservice
 [![Docker Hub][Docker Pulls Badge]][Docker Hub URL]
 [![Apache License Badge]][Apache License, Version 2.0]
 
-__Entity Webservice__ is a Spring Boot application template that lets us set up model driven JSON API web service with
+__Entity Webservice__ is a Spring Boot application template that lets us set up REST JSON API webservice with
 minimal effort. Its goal is to swiftly productionize a persistence webservice with modern CI/CD support.
 
 Entity Webservice is designed for:
@@ -21,10 +21,18 @@ It __is not for__:
 
 For this reason, Entity Webservice is suitable for a microservice architecture.
 
-Documentation
--------------
+✨ Features
+-----------
 
-More information about Entity-WS can be found at [entity-ws.qubitpi.org](https://entity-ws.qubitpi.org/).
+- __Explicit interface__: Entity WS specifically serves impersonation-free CRUD operations
+- __Tech agnostic API__: In a world of constant and rapid changes, Entity WS does not require integration technology
+  that dictates what technology stack to use for interactions
+- __Simple__: Entity WS allows clients full freedom in technology choice by [![API Doc Badge]][API Doc URL]
+
+🚀 Quick Start
+--------------
+
+Start a production quality service at [entity-ws.qubitpi.org](https://entity-ws.qubitpi.org/docs/intro).
 
 License
 -------
