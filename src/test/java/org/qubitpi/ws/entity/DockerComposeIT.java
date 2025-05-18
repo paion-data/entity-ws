@@ -42,7 +42,7 @@ public class DockerComposeIT {
 
     @Container
     private static final DockerComposeContainer COMPOOSE =
-            new DockerComposeContainer(new File("docker-compose.yml"))
+            new DockerComposeContainer(new File("docker-compose.yaml"))
                     .withExposedService("entity-ws", 8080)
                     .withEnv("ENTITY_WS_ARANGO_HOSTS", "http://arango-db:8529")
                     .withEnv("ENTITY_WS_ARANGO_USERNAME", "root")
