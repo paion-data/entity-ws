@@ -97,7 +97,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
+                    <configLocation>https://raw.githubusercontent.com/paion-data/.github/refs/heads/master/checkstyle.xml</configLocation>
                     <includes>**\/*.java,**\/*.groovy</includes>
                     <resourceIncludes>**/*.properties,**/*.sample</resourceIncludes>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
