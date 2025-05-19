@@ -3,21 +3,6 @@ sidebar_position: 1
 title: Introduction
 ---
 
-__Entity Webservice__ is a Spring Boot application template that lets us set up model driven JSON API web service with
-minimal effort. Its goal is to swiftly productionize a persistence webservice with modern CI/CD support.
-
-Entity Webservice is designed for:
-
-- non-business persistence capabilities
-- performance-wise caching
-
-It __is not for__:
-
-- security aspect, such as Authentication or Authorization
-- any business layer logics
-
-For this reason, Entity Webservice is suitable for a microservice architecture.
-
 Quick Start
 -----------
 
@@ -47,7 +32,8 @@ export ARANGO_ROOT_PASSWORD=$ENTITY_WS_ARANGO_PASSWORD
 
 ### Spinning Up Services
 
-There is a reference [docker-compose.yaml](./docker-compose.yaml) where we could use for production. Simply execute
+There is a reference [docker-compose.yaml](https://github.com/QubitPi/entity-ws/blob/master/docker-compose.yaml) where
+we could use for production. Simply execute
 
 ```console
 docker compose up
