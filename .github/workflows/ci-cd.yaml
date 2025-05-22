@@ -28,8 +28,8 @@ jobs:
       contents: write
       actions: write
     with:
-      cname: entity-ws.paion-data.dev
-      docker-image-name: entity-ws
+      cname: kugelblitz.paion-data.dev
+      docker-image-name: kugelblitz
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
       dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
