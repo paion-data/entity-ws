@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>org.qubitpi</groupId>
-    <artifactId>entity-ws</artifactId>
+    <artifactId>kugelblitz</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>entity-ws</name>
+    <name>Kugelblitz</name>
     <description>Spring Boot Starter based CRUD webservice</description>
     <url>https://github.com/QubitPi/Kugelblitz</url>
 
