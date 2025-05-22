@@ -17,7 +17,7 @@ title: Development
 [//]: # (See the License for the specific language governing permissions and)
 [//]: # (limitations under the License.)
 
-The following guide is intended to help developers who maintain or want to make changes to the Entity Webservice.
+The following guide is intended to help developers who maintain or want to make changes to the Kugelblitz.
 
 Preparing for Local Development
 -------------------------------
@@ -51,7 +51,7 @@ Make sure to execute the `sudo ln -sfn`, `echo 'export PATH=...`, and the `expor
 
 :::tip
 
-Entity WS is built using maven, which uses a separate JDK version. This can be seen via `mvn -v`. If it's not JDK 17, we
+Kugelblitz is built using maven, which uses a separate JDK version. This can be seen via `mvn -v`. If it's not JDK 17, we
 should have Maven point to our JDK 17 using [JAVA_HOME](https://stackoverflow.com/a/2503679):
 
 ```bash
@@ -74,26 +74,26 @@ OpenJDK 64-Bit Server VM (build 17.0.10+9, mixed mode)
 
 ### Installing Docker Engine
 
-Entity WS has
-[Docker-based integration tests](https://github.com/QubitPi/Kugelblitz/blob/master/src/test/java/org/qubitpi/ws/entity/arango/ArangoControllerIT.java);
+Kugelblitz has
+[Docker-based integration tests](https://github.com/QubitPi/Kugelblitz/blob/master/src/test/java/org/qubitpi/kugelblitz/arango/ArangoControllerIT.java);
 it also supports
-[running template webserivce in Docker](https://github.com/QubitPi/Kugelblitz/blob/master/src/test/java/org/qubitpi/ws/entity/DockerComposeIT.java).
+[running template webserivce in Docker](https://github.com/QubitPi/Kugelblitz/blob/master/src/test/java/org/qubitpi/kugelblitz/DockerComposeIT.java).
 Docker can be installed by following [this instruction](https://docker.qubitpi.org/desktop/setup/install/mac-install/)
 
 Getting Source Code
 -------------------
 
 ```bash
-git clone git@github.com:QubitPi/entity-ws.git
-cd entity-ws
+git clone git@github.com:QubitPi/Kugelblitz.git
+cd Kugelblitz
 ```
 
-### Syncing up with Entity WS's Code Styles with IntelliJ
+### Syncing up with Kugelblitz's Code Styles with IntelliJ
 
-For the moment, we have distilled the most important code style conventions with respect to Entity WS's code as IntelliJ
+For the moment, we have distilled the most important code style conventions with respect to Kugelblitz's code as IntelliJ
 settings. If IntelliJ is used for IDE, we may import these code style settings by importing the
-[Entity-WS-Project-intellij-code-style.xml](https://github.com/QubitPi/Kugelblitz/blob/master/Entity-WS-Project-intellij-code-style.xml)
-file in the root of the repo. The setting for the project will appear as a new Scheme named "Entity-WS-Project" under
+[Kugelblitz-Project-intellij-code-style.xml](https://github.com/QubitPi/Kugelblitz/blob/master/Kugelblitz-Project-intellij-code-style.xml)
+file in the root of the repo. The setting for the project will appear as a new Scheme named "Kugelblitz-Project" under
 IDE's __Editor__ -> __Code Style__ section.
 
 Please also enable "remove unused imports" by __Editor__ -> __General__ -> __Auto Import__ -> __Optimize Imports on the
@@ -132,19 +132,19 @@ For more documentation on navigating the Arango Web UI, please refer to
 :::
 
 ```console
-git clone git@github.com:QubitPi/entity-ws.git
-cd entity-ws
+git clone git@github.com:QubitPi/Kugelblitz.git
+cd Kugelblitz
 mvn clean package
 
-export ENTITY_WS_ARANGO_HOSTS=http://localhost:8529
-export ENTITY_WS_ARANGO_USERNAME=root
-export ENTITY_WS_ARANGO_PASSWORD=root
+export KUGELBLITZ_ARANGO_HOSTS=http://localhost:8529
+export KUGELBLITZ_ARANGO_USERNAME=root
+export KUGELBLITZ_ARANGO_PASSWORD=root
 
-java -jar target/entity-ws-0.0.1-SNAPSHOT.jar
+java -jar target/kugelblitz-0.0.1-SNAPSHOT.jar
 ```
 
-Note that the `ENTITY_WS_ARANGO_USERNAME` and the `ENTITY_WS_ARANGO_PASSWORD` is in accordance with the ArandoDB Docker
-configuration above. In addition, `ENTITY_WS_ARANGO_HOSTS` must start with either "__http://__" or "__https://__"
+Note that the `KUGELBLITZ_ARANGO_USERNAME` and the `KUGELBLITZ_ARANGO_PASSWORD` is in accordance with the ArandoDB Docker
+configuration above. In addition, `KUGELBLITZ_ARANGO_HOSTS` must start with either "__http://__" or "__https://__"
 
 The default port is 8080.
 

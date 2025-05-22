@@ -32,7 +32,7 @@ function HomepageHeader() {
 
         <div className="container">
           <h1 className="hero__title">
-            <img src="img/logo.svg" alt="Entity WS Logo" width={200}/>
+            <img src="img/logo.svg" alt="Kugelblitz Logo" width={200}/>
           </h1>
           <p className="hero__subtitle" style={{ color: "white" }}>
             Webservice with first-class support for <b><em>Graph Database</em></b>
@@ -52,7 +52,7 @@ function HomepageHeader() {
                   href="https://github.com/QubitPi/Kugelblitz"
                   rel="noopener"
                   target="_blank"
-                  aria-label="Star QubitPi/entity-ws on GitHub"
+                  aria-label="Star QubitPi/Kugelblitz on GitHub"
                   style={{
                     textDecoration: 'none',
                     color: 'inherit',

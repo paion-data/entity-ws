@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * A standard Spring service layer responsible for the collection-related interaction between entity-ws and ArangoDB.
+ * A standard Spring service layer responsible for the collection-related interaction between Kugelblitz and ArangoDB.
  */
 @Service
 class CollectionService extends AbstractRestService {

@@ -43,7 +43,7 @@ const FeatureList: FeatureItem[] = [
     id: 'graph-icon',
     description: (
         <>
-          Designed for Knowledge Graph and connection inference, Entity WS has first-class support
+          Designed for Knowledge Graph and connection inference, Kugelblitz has first-class support
           for <a href="https://arango.qubitpi.org/stable/">ArangoDB</a> as a back-end and flexible pipeline-style
           architecture which handles nearly any graph database for data storage
         </>
@@ -57,7 +57,7 @@ const FeatureList: FeatureItem[] = [
     id: 'not-used',
     description: (
         <>
-          Entity WS is 100% open source and available on <a href="https://github.com/QubitPi/Kugelblitz">Github</a>.
+          Kugelblitz is 100% open source and available on <a href="https://github.com/QubitPi/Kugelblitz">Github</a>.
           Released
           under the commercial-friendly
           <a href="http://www.apache.org/licenses/LICENSE-2.0.html"> Apache License, Version 2.0.</a>

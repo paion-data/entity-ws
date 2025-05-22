@@ -46,13 +46,13 @@ abstract class AbstractRestService {
     private static final HttpClient HTTP_CLIENT = HttpClient.newHttpClient();
     private static final Logger LOG = LoggerFactory.getLogger(AbstractRestService.class);
 
-    @Value("${entity-ws.arango.hosts}")
+    @Value("${kugelblitz.arango.hosts}")
     protected String host;
 
-    @Value("${entity-ws.arango.username}")
+    @Value("${kugelblitz.arango.username}")
     protected String username;
 
-    @Value("${entity-ws.arango.password}")
+    @Value("${kugelblitz.arango.password}")
     protected String password;
 
     /**

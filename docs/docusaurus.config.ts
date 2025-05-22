@@ -19,7 +19,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Entity Webservice',
+  title: 'Kugelblitz',
   tagline: 'Webservice with first-class support for Graph Database',
   favicon: 'img/favicon.ico',
 
@@ -51,7 +51,7 @@ const config: Config = {
   themeConfig: {
     image: 'img/logo.png',
     navbar: {
-      title: 'Entity WS',
+      title: 'Kugelblitz',
       logo: {
         alt: 'Kugelblitz Logo',
         src: 'img/logo.svg',

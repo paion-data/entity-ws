@@ -43,10 +43,10 @@ public class DockerComposeIT {
     @Container
     private static final DockerComposeContainer COMPOOSE =
             new DockerComposeContainer(new File("docker-compose.yaml"))
-                    .withExposedService("entity-ws", 8080)
-                    .withEnv("ENTITY_WS_ARANGO_HOSTS", "http://arango-db:8529")
-                    .withEnv("ENTITY_WS_ARANGO_USERNAME", "root")
-                    .withEnv("ENTITY_WS_ARANGO_PASSWORD", "root")
+                    .withExposedService("kugelblitz", 8080)
+                    .withEnv("KUGELBLITZ_ARANGO_HOSTS", "http://arango-db:8529")
+                    .withEnv("KUGELBLITZ_ARANGO_USERNAME", "root")
+                    .withEnv("KUGELBLITZ_ARANGO_PASSWORD", "root")
                     .withEnv("ARANGO_ROOT_PASSWORD", "root")
                     .withStartupTimeout(Duration.ofSeconds(600));
 

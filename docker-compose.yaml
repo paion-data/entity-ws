@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 services:
-  entity-ws:
-    image: jack20191124/entity-ws
+  kugelblitz:
+    image: jack20191124/kugelblitz
     ports:
       - "8080:8080"
     environment:
-      ENTITY_WS_ARANGO_HOSTS: ${ENTITY_WS_ARANGO_HOSTS}
-      ENTITY_WS_ARANGO_USERNAME: ${ENTITY_WS_ARANGO_USERNAME}
-      ENTITY_WS_ARANGO_PASSWORD: ${ENTITY_WS_ARANGO_PASSWORD}
+      KUGELBLITZ_ARANGO_HOSTS: ${KUGELBLITZ_ARANGO_HOSTS}
+      KUGELBLITZ_ARANGO_USERNAME: ${KUGELBLITZ_ARANGO_USERNAME}
+      KUGELBLITZ_ARANGO_PASSWORD: ${KUGELBLITZ_ARANGO_PASSWORD}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
       timeout: 10s

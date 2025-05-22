@@ -61,7 +61,7 @@ public class ArangoControllerIT {
     @DynamicPropertySource
     static void registerPgProperties(final DynamicPropertyRegistry registry) {
         registry.add(
-                "entity-ws.arango.hosts",
+                "kugelblitz.arango.hosts",
                 () -> String.format("http://%s:%s", ARANGO_DB.getHost(), ARANGO_DB.getMappedPort(8529))
         );
     }

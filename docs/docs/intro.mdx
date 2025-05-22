@@ -9,25 +9,25 @@ Quick Start
 ### Getting Source Code
 
 ```console
-git clone git@github.com:QubitPi/entity-ws.git
-cd entity-ws
+git clone git@github.com:QubitPi/Kugelblitz.git
+cd Kugelblitz
 ```
 
 ### Setting Environment Variables
 
 :::tip
 
-- Feel free to change the values of `ENTITY_WS_ARANGO_USERNAME` and `ENTITY_WS_ARANGO_PASSWORD`. The values below are
+- Feel free to change the values of `KUGELBLITZ_ARANGO_USERNAME` and `KUGELBLITZ_ARANGO_PASSWORD`. The values below are
 examples only.
-- Please do NOT, however, modify the values `http://arango-db:8529` and `$ENTITY_WS_ARANGO_PASSWORD`
+- Please do NOT, however, modify the values `http://arango-db:8529` and `$KUGELBLITZ_ARANGO_PASSWORD`
 
 :::
 
 ```console
-export ENTITY_WS_ARANGO_HOSTS=http://arango-db:8529 && \
-export ENTITY_WS_ARANGO_USERNAME=root && \
-export ENTITY_WS_ARANGO_PASSWORD=root && \
-export ARANGO_ROOT_PASSWORD=$ENTITY_WS_ARANGO_PASSWORD
+export KUGELBLITZ_ARANGO_HOSTS=http://arango-db:8529 && \
+export KUGELBLITZ_ARANGO_USERNAME=root && \
+export KUGELBLITZ_ARANGO_PASSWORD=root && \
+export ARANGO_ROOT_PASSWORD=$KUGELBLITZ_ARANGO_PASSWORD
 ```
 
 ### Spinning Up Services
@@ -43,21 +43,21 @@ When we see the output like the following
 
 ```text
 arango-db-1  | 2025-05-11T15:26:29Z [1] INFO [cf3f4] {general} ArangoDB (version 3.11.13 [linux]) is ready for business. Have fun!
-entity-ws-1  |
-entity-ws-1  |   .   ____          _            __ _ _
-entity-ws-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-entity-ws-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-entity-ws-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-entity-ws-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
-entity-ws-1  |  =========|_|==============|___/=/_/_/_/
-entity-ws-1  |
-entity-ws-1  |  :: Spring Boot ::                (v3.4.4)
-entity-ws-1  |
+kugelblitz-1  |
+kugelblitz-1  |   .   ____          _            __ _ _
+kugelblitz-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+kugelblitz-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+kugelblitz-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+kugelblitz-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+kugelblitz-1  |  =========|_|==============|___/=/_/_/_/
+kugelblitz-1  |
+kugelblitz-1  |  :: Spring Boot ::                (v3.4.4)
+kugelblitz-1  |
 ...
-entity-ws-1  | 2025-05-11T15:27:29.539Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+kugelblitz-1  | 2025-05-11T15:27:29.539Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 ```
 
-it means we are ready to play with Entity WS. Let's create a book entity first
+it means we are ready to play with Kugelblitz. Let's create a book entity first
 
 ```console
 curl -X 'POST' \

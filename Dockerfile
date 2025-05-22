@@ -13,9 +13,9 @@
 # limitations under the License.
 FROM maven:3.8.3-openjdk-17 as build
 
-RUN mkdir /entity-ws
-COPY . /entity-ws
-RUN cd /entity-ws && mvn clean package -Dmaven.test.skip=true
+RUN mkdir /kugelblitz
+COPY . /kugelblitz
+RUN cd /kugelblitz && mvn clean package -Dmaven.test.skip=true
 
 FROM openjdk:17-jdk-alpine
 
@@ -24,6 +24,6 @@ LABEL maintainer-email="jack20220723@gmail.com"
 
 RUN apk add curl
 
-COPY --from=build /entity-ws/target/*.jar app.jar
+COPY --from=build /kugelblitz/target/*.jar app.jar
 
 ENTRYPOINT ["java","-jar","/app.jar"]

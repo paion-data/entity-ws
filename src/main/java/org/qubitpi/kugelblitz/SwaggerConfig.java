@@ -39,9 +39,9 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(
                         new Info()
-                                .title("Entity Webservice")
+                                .title("Kugelblitz")
                                 .version("0.0.1")
-                                .description("Entity Webservice REST API Interface")
+                                .description("Kugelblitz REST API Interface")
                                 .contact(
                                         new Contact()
                                                 .name("Jiaqi Liu")

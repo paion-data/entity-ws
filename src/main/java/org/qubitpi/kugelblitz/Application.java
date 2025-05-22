@@ -19,7 +19,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * The main JAR for running the entity WS.
+ * The main JAR for running the Kugelblitz.
  */
 @SpringBootApplication
 public class Application {

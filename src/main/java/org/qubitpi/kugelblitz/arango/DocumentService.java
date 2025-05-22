@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 /**
- * A standard Spring service layer responsible for the document-related interaction between entity-ws and ArangoDB.
+ * A standard Spring service layer responsible for the document-related interaction between Kugelblitz and ArangoDB.
  */
 @Service
 class DocumentService extends AbstractRestService {
