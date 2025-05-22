@@ -18,7 +18,7 @@ import {useEffect, useMemo, useState} from "react";
 import {loadSlim} from "@tsparticles/slim";
 
 /**
- * The background component of entity-ws.qubitpi.org's hompage.
+ * The background component of kugelblitz.qubitpi.org's hompage.
  *
  * @param props  The regular React props object that contains only 1 attribute for now: "id", which is used for CSS
  * selector linking

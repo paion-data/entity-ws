@@ -23,11 +23,11 @@ const config: Config = {
   tagline: 'Webservice with first-class support for Graph Database',
   favicon: 'img/favicon.ico',
 
-  url: 'https://entity-ws.qubitpi.org',
+  url: 'https://kugelblitz.qubitpi.org',
   baseUrl: '/',
 
   organizationName: 'QubitPi',
-  projectName: 'entity-ws',
+  projectName: 'Kugelblitz',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -39,7 +39,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-              'https://github.com/QubitPi/entity-ws/tree/master/docs',
+              'https://github.com/QubitPi/Kugelblitz/tree/master/docs',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -53,7 +53,7 @@ const config: Config = {
     navbar: {
       title: 'Entity WS',
       logo: {
-        alt: 'entity-ws Logo',
+        alt: 'Kugelblitz Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -64,12 +64,12 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: "https://entity-ws.qubitpi.org/apidocs",
+          href: "https://kugelblitz.qubitpi.org/apidocs",
           label: "API",
           position: "left",
         },
         {
-          href: 'https://github.com/QubitPi/entity-ws',
+          href: 'https://github.com/QubitPi/Kugelblitz',
           label: ' ',
           position: 'right',
           className: 'header-icon-link header-github-link',
@@ -97,7 +97,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/QubitPi/entity-ws',
+              href: 'https://github.com/QubitPi/Kugelblitz',
             },
             {
                 label: 'Jiaqi Liu',

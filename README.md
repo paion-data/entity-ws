@@ -34,7 +34,7 @@ For this reason, Entity Webservice is suitable for a microservice architecture.
 🚀 Quick Start
 --------------
 
-Start a production quality service at [entity-ws.qubitpi.org](https://entity-ws.qubitpi.org/docs/intro).
+Start a production quality service at [kugelblitz.qubitpi.org](https://kugelblitz.qubitpi.org/docs/intro).
 
 License
 -------

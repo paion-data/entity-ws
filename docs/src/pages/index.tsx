@@ -49,7 +49,7 @@ function HomepageHeader() {
                 style={{marginLeft: '10px'}}
             >
               <a
-                  href="https://github.com/QubitPi/entity-ws"
+                  href="https://github.com/QubitPi/Kugelblitz"
                   rel="noopener"
                   target="_blank"
                   aria-label="Star QubitPi/entity-ws on GitHub"
