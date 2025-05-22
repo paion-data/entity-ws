@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.paiondata.ws.entity"},{"l":"com.paiondata.ws.entity.arango"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.paiondata.kugelblitz"},{"l":"com.paiondata.kugelblitz.arango"}];updateSearchResults();
